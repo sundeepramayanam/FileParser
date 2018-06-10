@@ -2,7 +2,7 @@ package com.main.pack;
 
 import java.util.Date;
 
-public class DocumentInformation {
+public class Document {
 
 	private String field;
 	private String category;
