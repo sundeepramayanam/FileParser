@@ -28,7 +28,9 @@ public class DocumentUtils {
 	}
 	public Document readContent(File file) throws IOException{
 		Document document = new Document();
-		document.setField(file.getName());
+		document.setFileId(file.getCanonicalPath());
+		//document.setFileId(file.getName());
+		System.out.println(document.getFileId());
         try(BufferedReader br  = new BufferedReader(new FileReader(file))){
               String strLine;
               while((strLine = br.readLine()) != null){
@@ -37,6 +39,17 @@ public class DocumentUtils {
              }
         return document;
     }
+	
+	public void printDocumentContents(Document doc) {
+		System.out.println("FileId : " + doc.getFileId());
+		System.out.println("Category : " + doc.getCategory());
+		System.out.println("Title : " + doc.getTitle());
+		System.out.println("Author : " + doc.getAuthor());
+		System.out.println("AuthorOrg : " + doc.getAuthorOrg());
+		System.out.println("Place : " + doc.getPlace());
+		System.out.println("NewsDate : "+ doc.getNewsDate());
+		System.out.println("Content :  " + doc.getContent());
+	}
 
 	
 }

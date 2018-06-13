@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Document {
 
-	private String field;
+	private String fileId;
 	private String category;
 	private String title;
 	private String author;
@@ -13,11 +13,12 @@ public class Document {
 	private Date newsDate;
 	private String content;
 	
-	public String getField() {
-		return field;
+	
+	public String getFileId() {
+		return fileId;
 	}
-	public void setField(String field) {
-		this.field = field;
+	public void setFileId(String fileId) {
+		this.fileId = fileId;
 	}
 	public String getCategory() {
 		return category;
